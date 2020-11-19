@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Scissors Paper Game</title>
+</head>
+<body>
+    <div class="sidebar_left fadeOut">
+      <div class="player">
+          <h2>Player</h2>
+          <div class="player-score score">
+            <h3>Score</h3>
+            <p>0</p>
+          </div>
+          <div class="player_high_scorescore score">
+            <h3>High score</h3>
+            <p>0</p>
+          </div>
+      </div>
+      <div class="computer">
+          <h2>Computer</h2>
+          <div class="computer-score score score">
+            <h3>score</h3>
+              <p>0</p>
+          </div> 
+          <div class="computer_high_score score">
+              <h3>High Score</h3>
+              <p>0</p>
+          </div> 
+      </div>
+    </div>
+    <section class="game">
+        <div class="intro">
+          <h1>Rock Paper and Scissors</h1>
+          <button>Ready to start!</button>
+        </div>
+  
+        <div class="match fadeOut">
+          <h2 class="winner">Choose an option</h2>
+          <div class="hands">
+            <img class="player-hand" src="" alt="" />
+            <img class="computer-hand" src="" alt="" />
+          </div>
+          <div class="options">
+            <button class="rock">rock</button>
+            <button class="paper">paper</button>
+            <button class="scissors">scissors</button>
+          </div>
+        </div>
+    </section>
+
+    <div class="sidebar_right fadeOut">
+      <div class="Shop">
+          <h2>Shop</h2>
+          <h3>My Coins</h3> <p>0</p></p>
+          <button class="shop_btn">2X = 3 coins</button>
+          <button class="shop_btn">5X = 6 coins</button>
+          <button class="shop_btn">10X = 8 coins</button>
+      </div>
+      <div class="sittings">
+          <h2>Sittings</h2>
+          <ul>
+            <li><a href="">RESET</a></li>
+            <li><a href="">RESIGN</a></li>
+          </ul>
+         
+      </div>
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
