@@ -1,199 +1,179 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
   }
-  body{
-    margin: 10px;
-    display: flex;
-    background-color: rgb(39, 41, 68);
+  body {
+  margin : 10px;
+  display : flex;
+  background-color : rgb(39, 41, 68);
   }
-  h2{
-      text-align: center;
-      border-bottom: white 2px solid;
-      font-size: 3vh;
+  h2 {
+  text-align : center;
+  border-bottom : 2px solid white;
+  font-size : 3vh;
   }
-  h3{
-      font-size: smaller;
-      text-align: left;
+  h3 {
+  font-size : smaller;
+  text-align : left;
   }
   section {
-    height: 100vh;
-    width: 120%;
-    background-color: rgb(39, 41, 68);
-    font-family: sans-serif;
-    display: flex;
-    
+  height : 100vh;
+  width : 120%;
+  background-color : rgb(39, 41, 68);
+  font-family : sans-serif;
+  display : flex;
   }
-  .sidebar_left,
-  .sidebar_right{
-      display: flex;
-      background-color: chocolate;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-      width: 25vh;
-      padding: 5px;
-      min-width: 100px;
-     
-
+  .sidebar_left, .sidebar_right {
+  display : flex;
+  background-color : chocolate;
+  flex-direction : column;
+  justify-content : center;
+  height : 100vh;
+  width : 25vh;
+  padding : 5px;
+  min-width : 100px;
   }
-  .player{
-      height: 40%;
+  .player {
+  height : 40%;
   }
-  .score{
-      display: flex;
-      padding: 10px;
-      justify-content: space-between;
+  .score {
+  display : flex;
+  padding : 10px;
+  justify-content : space-between;
   }
-  .player{
-      height: 2;
+  .Shop, .sitting {
+  padding-left : 5px;
   }
-  .Shop,
-  .sitting{
-    padding-left: 5px;
+  .Shop {
+  height : 40%;
   }
-  .Shop{
-    height: 40%;
+  .shop_btn {
+  width : 90px;
+  font-weight : 700;
+  margin-top : 10px;
   }
-  .shop_btn{
-    width: 90px;
-    font-weight: 700;
-    margin-top: 10px;
-  }
-  .Shop h3,
-  .Shop p{
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 15px;
+  .Shop h3, .Shop p {
+  text-align : center;
+  margin-bottom : 10px;
+  margin-top : 15px;
   }
   .intro {
-    color: rgb(224, 224, 224);
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-left:200px;
-    transition: opacity 0.5s ease;
+  color : rgb(224, 224, 224);
+  height : 50vh;
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  justify-content : space-around;
+  padding-left : 200px;
+  transition : opacity 0.5s ease;
   }
-  
   .intro h1 {
-    font-size: 50px;
+  font-size : 50px;
   }
-  .btn_container{
-    display: flex;
-    flex-direction: column;
+  .btn_container {
+  display : flex;
+  flex-direction : column;
   }
-  .intro button,
-  .match button {
-    width: 150px;
-    height: 50px;
-    background: none;
-    border: none;
-    color: rgb(224, 224, 224);
-    font-size: 20px;
-    background: rgb(45, 117, 96);
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  .winner{
-border: none;  }
-  .play_btn_container{
-    display: flex;
-    justify-content: center;
-  }
-  .play_btn_container button{
-    margin-top: 15px;
-    width: 100%;
-  }
-  .hands img{
-    height: auto;
-    width: 30%;
-  }
-  .hands,
-  .options {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-.player-hand {
-  transform: rotateY(180deg);
-}
-
-  .sittings li,
-  a{
-    list-style: none;
-    padding: 5px;
-    margin-top: 10px;
-    text-decoration: none;
-    background-color: cyan;
-    color: black;
-    border-radius: 5px;
-  }
-  
-  .match {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.5s ease 0.5s;
+  .intro button, .match button {
+  width : 150px;
+  height : 50px;
+  background : none;
+  border : none;
+  color : rgb(224, 224, 224);
+  font-size : 20px;
+  background : rgb(45, 117, 96);
+  border-radius : 3px;
+  cursor : pointer;
   }
   .winner {
-    color: rgb(224, 224, 224);
-    text-align: center;
-    font-size: 50px;
+  border : none;
+  }
+  .play_btn_container {
+  display : flex;
+  justify-content : center;
+  }
+  .play_btn_container button {
+  margin-top : 15px;
+  width : 100%;
+  }
+  .hands img {
+  height : auto;
+  width : 30%;
+  }
+  .hands, .options {
+  display : flex;
+  justify-content : space-around;
+  align-items : center;
+  }
+  .player-hand {
+  transform : rotateY(180deg);
+  }
+  .sittings li, a {
+  list-style : none;
+  padding : 5px;
+  margin-top : 10px;
+  text-decoration : none;
+  background-color : cyan;
+  color : black;
+  border-radius : 5px;
+  }
+  .match {
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%,-50%);
+  transition : opacity 0.5s 0.5s ease;
+  }
+  .winner {
+  color : rgb(224, 224, 224);
+  text-align : center;
+  font-size : 50px;
   }
   div.fadeOut {
-    opacity: 0;
-    pointer-events: none;
+  opacity : 0;
+  pointer-events : none;
   }
-  
   div.fadeIn {
-    opacity: 1;
-    pointer-events: all;
-  }  
-
+  opacity : 1;
+  pointer-events : all;
+  }
   @media (max-width: 900px) {
-    section{
-      width: 80vh;
-    }
-    .match h2 {
-      font-size: smaller;
-    }
-    .options button{
-      font-size: smaller;
-      width: 100px;
-      height: 35px;
-      margin-top: 5px;
-    }
-    .play_btn_container button{
-      font-size: small;
-      font-weight: 800;
-      margin-top: 15px;
-      width: 60%;
-    }
-        
-    h1,
-    h2,
-    h3,
-    p{
-      font-size: smaller;
-    }
-    .options{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .Shop button{
-      font-size: x-small;
-      width: 80px;
-    }
+  section {
+  width : 80vh;
+  }
+  .match h2 {
+  font-size : smaller;
+  }
+  .options button {
+  font-size : smaller;
+  width : 100px;
+  height : 35px;
+  margin-top : 5px;
+  }
+  .play_btn_container button {
+  font-size : small;
+  font-weight : 800;
+  margin-top : 15px;
+  width : 60%;
+  }
+  h1, h2, h3, p {
+  font-size : smaller;
+  }
+  .options {
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  }
+  .Shop button {
+  font-size : x-small;
+  width : 80px;
+  }
   }
   @media (max-width: 600px) {
-    section{
-      width: 35vh;
-    }
+  section {
+  width : 35vh;
   }
+  }
+  
