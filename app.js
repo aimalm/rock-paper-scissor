@@ -1,9 +1,12 @@
 (function () {
   let pScore = 0;
   let cScore = 0;
-  let pHighScore = [];
-  let cHighScore = [];
-  let coins = [];
+  let pHighScore = 0;
+  let cHighScore = 0;
+  let coins = 0;
+  let pScoreArray = [];
+  let cScoreArray = [];
+
 
   const startGame = () => {
     const playBtn = document.querySelector(".intro button");
@@ -24,6 +27,9 @@
     const computerHand = document.querySelector(".computer-hand");
     const hands = document.querySelectorAll(".hands img");
     const playBtn = document.getElementById("play_btn");
+
+    
+
 
     hands.forEach((hand) => {
     hand.addEventListener("animationend", function () {
@@ -60,10 +66,19 @@
     function updateScore() {
       const playerScore = document.querySelector(".player-score p");
       const computerScore = document.querySelector(".computer-score p");
+      const computerHighScore = document.querySelector(".computer_high_score p");
+      const playerrHighScore = document.querySelector(".player_high_scorescore p");
+      const playerCoins = document.querySelector(".coins");
+      
+      playerrHighScore.textContent = pHighScore;
+      computerHighScore.textContent = cHighScore;
       playerScore.textContent = pScore;
       computerScore.textContent = cScore;
-    }
+      playerCoins.textContent = coins;
+      
+    };
 
+     
     const compareHands = (playerChoice, computerChoice) => {
       const winner = document.querySelector(".winner");
       switch (playerChoice) {
@@ -72,11 +87,14 @@
             case "scissors":
               winner.textContent = "Player Wins";
               pScore++;
+              coinsCalc();
+              highScoreRecorder();
               updateScore();
               break;
             case "paper":
               winner.textContent = "Computer Wins";
               cScore++;
+              highScoreRecorder();
               updateScore();
               break;
             case "rock":
@@ -89,11 +107,15 @@
             case "scissors":
               winner.textContent = "Computer Wins";
               cScore++;
+              highScoreRecorder();
+
               updateScore();
               break;
             case "rock":
               winner.textContent = "Player Wins";
               pScore++;
+              coinsCalc();
+              highScoreRecorder();
               updateScore();
               break;
             case "paper":
@@ -106,11 +128,14 @@
             case "rock":
               winner.textContent = "Computer Wins";
               cScore++;
+              highScoreRecorder();
               updateScore();
               break;
             case "paper":
               winner.textContent = "Player Wins";
               pScore++;
+              coinsCalc();
+              highScoreRecorder();
               updateScore();
               break;
             case "scissors":
@@ -122,8 +147,43 @@
             winner.textContent = "You Have not choosen any of the options";
           }
     };
+
+    function highScoreRecorder() {
+        cScoreArray.push(cScore);
+        let cMax = Math.max(...cScoreArray);
+          cHighScore = cMax;
+
+          pScoreArray.push(pScore);
+        let pMax = Math.max(...pScoreArray);
+          pHighScore = pMax;
+    };
+    function coinsCalc() {
+      if(pScore === 2){
+        coins+=1
+      } else if(pScore === 5){
+        coins+=2
+      }
+      else if(pScore === 10){
+        coins+=3
+      }else if(pScore === 20){
+        coins+=4
+      }
   };
+
+
+    
+    document.getElementById("reset").addEventListener("click", function(){
+      pScore = 0;
+      cScore = 0;
+      updateScore();
+
+    })
+
+  };
+ 
 
   startGame();
   playMatch();
+
+ 
 })();
